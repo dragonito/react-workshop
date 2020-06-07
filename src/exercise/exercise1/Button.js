@@ -26,7 +26,7 @@ export default class Button extends React.Component {
          * Sobald der state sich geändert hat, wird render neu aufgerufen.
          */
         this.setState({
-            counter: 5
+            counter: this.state.counter+1
         });
     };
 
@@ -50,7 +50,7 @@ export default class Button extends React.Component {
          *   usw.
          */
         return (
-            <button>{foo}</button>
+            <button onClick={this.handleClick}>{foo+" "+this.state.counter}</button>
         );
     }
 }
