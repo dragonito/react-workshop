@@ -1,5 +1,6 @@
 import React from "react";
 import "./modal.css";
+import ModalButton from "./ModalButton";
 
 /*
  * Modal
@@ -15,13 +16,15 @@ import "./modal.css";
  */
 export default class Modal extends React.Component {
     render() {
+        console.log(this.props);
+
         return (
             <div className="modal_layer">
                 <div className="modal_box">
                     <div className="modal_content">
-                        Modal!!!
+                        {this.props.children} {this.props.test}
                     </div>
-                    <button>close</button>
+                    <button onClick={this.props.handleToggle}>close</button>
                 </div>
             </div>
         );

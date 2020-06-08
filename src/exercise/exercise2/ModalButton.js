@@ -13,21 +13,19 @@ export default class ModalButton extends React.Component {
         open: false
     };
 
-    handleOpen = () => {
-        alert("this button doesn't work :-(");
-    };
+    handleToggle = () => {
+        this.setState({
+            open: !this.state.open
+        })
 
-    handleClose = () => {
-        // todo...
+        console.log(this.state.open);
     };
 
     render() {
-        const open = false;
-
         return (
             <React.Fragment>
-                <button onClick={this.handleOpen}>Open!</button>
-                {open && <Modal></Modal>}
+                <button onClick={this.handleToggle}>Open!</button>
+                {this.state.open && <Modal handleToggle={this.handleToggle} test='test'>Hallo Welt</Modal>}
             </React.Fragment>
         );
     }
