@@ -17,8 +17,6 @@ export default class ModalButton extends React.Component {
         this.setState({
             open: !this.state.open
         })
-
-        console.log(this.state.open);
     };
 
     render() {
