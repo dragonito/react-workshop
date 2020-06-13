@@ -1,6 +1,5 @@
 import React from "react";
 import "./modal.css";
-import ModalButton from "./ModalButton";
 
 /*
  * Modal
